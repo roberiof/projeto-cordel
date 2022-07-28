@@ -7,6 +7,7 @@
 - tinha esquecido de configurar o background-color das sections -- lembra que pode ocorrer das imagens colocadas não carregarem, se isso acontecer, o usuário não consegue desfrutas do conteúdo, pois não vai haver configuração 
 - observando o meu css e o css final do guanabara, consigo perceber que o meu é uma bagunça bem grande 
 - quando duas tags html tem as mesmas config css, podemos declarar elas entre vírgulas
+- quando for adaptar o font-size, usar a medida vw ---- trazer a responsividade!!!
 */
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
