@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+/*MELHORIAS APÓS VER O VÍDEO DO GUANABARA FAZENDO O MESMO PROJETO: 
+-tinha ficado em dúvida sobre como ele tinha feito a letra do h1 do header---- usou font-variant: small-caps; (deixa as letras como se fosse maísculas e minúsculas ao mesmo tempo)
+- para configurar links tinha usado uma parte diferente para o p do header e outra para o link do footer, mas os dois fazem a mesma coisa então pode configurar o link mais geral mesmo 
+- o ideal seria colocar os textos das sections em tags p, indicando que elas seriam parágrafos --- não tinha feito isso
+- tinha esquecido de configurar o background-color das sections -- lembra que pode ocorrer das imagens colocadas não carregarem, se isso acontecer, o usuário não consegue desfrutas do conteúdo, pois não vai haver configuração 
+- observando o meu css e o css final do guanabara, consigo perceber que o meu é uma bagunça bem grande 
+- quando duas tags html tem as mesmas config css, podemos declarar elas entre vírgulas
+*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
@@ -11,7 +19,6 @@
     --fonte1: "Sriracha", cursive;
     --fonte2: "Passion One", cursive;
 }
-
 
 
 *{
@@ -29,19 +36,20 @@ header{
 header h1 {
     font-family: var(--fonte2);
     color: var(--cor1);
-    font-size: 8.5vw;
+    font-size: 9vw;
     letter-spacing: 1.5px;
+    font-variant: small-caps
 }
 header p {
     font-family: var(--fonte0);
     color: var(--cor1);
 }
-header a {
+a {
     text-decoration: none;
     color: var(--cor1);
     font-weight: bold;
 }
-header a:hover{
+a:hover{
     text-decoration: underline;
 }
 
@@ -54,35 +62,24 @@ section{
     line-height: 2em;
 }
 
-section.fundo001{
-    background-image: url(imagens/background001.jpg);
+section.fundo001 , section.fundo002{
+    background-color: gray; /*pós-vídeo*/
+    
     background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding: 70px 0px 70px 30px
-
 }
-
-section.fundo001 p{
-    color: var(--cor1);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin-left: -10px;
-    width: fit-content;
+section.fundo001{
+    background-image: url(imagens/background001.jpg);
 }
-
 section.fundo002{
     background-image: url(imagens/background002.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 70px 0px 70px 30px
-
 }
 
-section.fundo002 p{
+
+section.fundo001 p , section.fundo002 p{
     color: var(--cor1);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -90,23 +87,12 @@ section.fundo002 p{
     width: fit-content;
 }
 
-
 footer{
-    margin-top: 5vh;
-    background-color: var(--cor0);
-    text-align: center;
-    font-size: 1em;
-    font-family: var(--fonte0);
-    padding: 10px;
-    color: var(--cor1);
-}
-
-footer a{
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--cor1);
-}
-
-footer a:hover{
-    text-decoration: underline
+margin-top: 5vh;
+background-color: var(--cor0);
+text-align: center;
+font-size: 1em;
+font-family: var(--fonte0);
+padding: 10px;
+color: var(--cor1);
 }
